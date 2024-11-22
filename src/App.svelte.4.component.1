@@ -1,0 +1,51 @@
+<script>
+	let fruits = ["Apple", "Banana", "Cherry", "Orange", "Mango"];
+
+</script>
+
+
+<body> 
+	<h1> 공무직근로자 급여관리체계 재개발 </h1>
+	
+	<h2> 메뉴 리스트 </h2>
+
+	<ul>
+		{#each fruits as fruit}
+			<li>{fruit}</li>
+		{/each}
+	</ul>
+
+
+
+	<h2> 메뉴 리스트 reverse </h2>
+
+	<ul>
+		<!-- 
+			전개 연산자를 통한 copy 
+		-->
+		{#each [...fruits].reverse() as fruit}
+			<li>{fruit}</li>
+		{/each}
+	</ul>
+
+	
+
+	<h2> 메뉴 리스트 </h2>
+
+	<ul>
+		{#each fruits as fruit}
+			<li>{fruit}</li>
+		{/each}
+	</ul>
+
+
+	<h2> 메뉴 리스트 slice -2</h2>
+
+	<ul>
+		{#each [...fruits].slice(-2) as fruit}
+			<li>{fruit}</li>
+		{/each}
+	</ul>
+
+
+</body>
