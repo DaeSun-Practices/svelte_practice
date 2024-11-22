@@ -1,0 +1,24 @@
+<script>
+	export let name = "Fruits";
+	let fruits = ["Apple", "Banana", "Cherry", "Orange"];
+
+	function deleteFruit(){
+		fruits = fruits.slice(1)
+	}
+
+</script>
+
+
+<body> 
+	<h1> 공무직근로자 급여관리체계 재개발 </h1>
+	<ul>
+		{#each fruits as fruit}
+			<li>{fruit}</li>
+		{/each}
+	</ul>
+
+	<button on:click={deleteFruit}>
+		삭제기능
+	</button>
+
+</body>

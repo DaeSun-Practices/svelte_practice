@@ -1,0 +1,24 @@
+<script>
+	export let name = "world";
+	let toggle = false;
+
+	if (toggle) {
+
+	}
+
+</script>
+
+
+<body> 
+	<button on:click={() => {toggle = !toggle;}}>
+		Toggle
+	</button>
+
+	{#if toggle}  <!--시작하는 구문은 # 으로-->
+		<h1> 공무직근로자 급여관리체계 V2 </h1>
+	
+	{:else}    <!-- 중간에 들어가는 구문은 # 으로-->
+		<h1> 임시메뉴 생성란 </h1>
+
+	{/if}   <!--끝나는 구문은 / 으로-->
+</body>

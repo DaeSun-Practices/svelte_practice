@@ -1,0 +1,55 @@
+<script>
+	export let name = "world";
+	let age = 85;
+
+	function assgin(){
+		name = "hi"
+		age = 36
+	}
+
+	/*
+	setTimeout(() => {
+		
+	}, 3000)
+	*/
+</script>
+
+<main>
+	<h1> 공무직근로자 급여관리체계 재개발 </h1>
+	
+	/*
+	<h1>Hello {name}!</h1>
+
+	<!--조건에 따라 class 역시 다양하게 변경 가능하다. -->
+	<h2 class={age < 85 ? "active" : "" }> {age} </h2>
+	
+	<img src="" alt="{name}" />
+	<br>
+	
+	<!--기본적으로 단방향 바인딩이 된다.-->
+	<input type="text" value={name} />
+	<br>
+
+	<!-- 바인드 명령어로 양방향 바인드를 실행.-->
+	<input type="text" bind:value={name} />
+	<br>
+
+	<button on:click={assgin}>
+		할당하기
+	</button>
+
+
+	*/
+</main>
+
+
+
+<style>
+	h1 {
+		color: red;
+	}
+
+	.active {
+		color: blue;
+	}
+</style>

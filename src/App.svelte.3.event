@@ -1,0 +1,54 @@
+<script>
+	
+
+	let name = "world";
+	let isRed = false;
+
+	function enter () {
+		name = "공동관리";
+	}
+
+	function leave () {
+		name = "근로자 관리";
+	}
+
+
+
+	// 굳이 이렇게 복잡하게 할 필요가 없다.
+	/*
+	import { onMount } from 'svelte';
+	// 현재 컴포넌트가 준비되면 이 내용을 실행하겠다는 의미임.
+	onMount ( () => {
+		// 컴포넌트 준비 이후에 box 를 찾을 수가 있는 것이다.
+		const box = document.querySelector('.box');
+		box.addEventListener('click', () => { isRed = !isRed})
+	})
+	*/
+</script>
+
+
+<body> 
+	<h1> 공무직근로자 급여관리체계 재개발 </h1>
+	
+	<h2> {name} </h2>
+
+	<button 
+		class="box" 
+		style="background-color: {isRed ? 'red' : 'orange'};" 
+		on:click={() => {isRed = !isRed;}}
+		on:mouseenter={() => {enter()}}
+		on:mouseleave={() => {leave()}}
+	>
+		Box! 
+	</button>
+
+</body>
+
+<style>
+	.box {
+		width: 300px;
+		height: 150px;
+		background-color: orange;
+	}
+
+</style>

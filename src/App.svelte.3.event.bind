@@ -1,0 +1,25 @@
+<script>
+	let text = "";
+	
+</script>
+
+
+<body> 
+	<h1> 공무직근로자 급여관리체계 재개발 </h1>
+	
+	<h2> {text} </h2>
+
+	<input 
+		type="txt"
+		bind:value = {text}
+		on:input = { (e) => { text = e.target.value}}
+	/>
+
+	<button
+		on:click={ () => {text = "수당/공제관리"}}
+	>
+		Click
+	</button>
+	
+
+</body>
